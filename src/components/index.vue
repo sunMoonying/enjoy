@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style>
+section{
+  padding: 15px;
+  padding-top: 30px;
 
+}
 
 </style>
