@@ -14,6 +14,7 @@ import login from '../components/login'
 import more from '../components/more'
 import better from '../components/better'
 import newr from '../components/newr'
+import list from '../components/list'
 
 Vue.use(Router)
 
@@ -39,7 +40,11 @@ export default new Router({
     	{
     		path: 'entry/:id1',
     		component: entry
-    	}]
+    	},
+        {
+            path : 'list',
+            component : list
+        }]
 
     },
     
@@ -89,8 +94,17 @@ export default new Router({
         {
             path : 'better',
             component : better
-        }]
+        },
+        // {
+        //     path : '/more',
+        //     redirect : '/more/better'
+        // }
+        ]
     },
+    // {
+    //     path : '/list',
+    //     component : list
+    // },
     {
         path:'*',
         redirect : '/index'

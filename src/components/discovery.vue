@@ -124,8 +124,6 @@ export default {
     bandclick(data){
     var str = data.substr(39);
       this.$router.push({path: '/more', query: {str}});
-      console.log(str)
-
     }
   }
   
