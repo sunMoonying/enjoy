@@ -71,7 +71,6 @@ export default {
 		background-color: #f6f6f6;
 	}
 	.head{
-		    width: 375px;
     height: 199px;
     background: url(https://passport.ricebook.com/9013f951f15c2f7cd0ad4f526adb0007.png) 0 0 no-repeat;
     text-align: center;
