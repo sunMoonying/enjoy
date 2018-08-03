@@ -34,7 +34,7 @@ export default new Router({
     		redirect : '/index/home'
     	},
     	{
-    		path: '/entry/:id1',
+    		path: 'entry/:id1',
     		component: entry
     	}]
 
