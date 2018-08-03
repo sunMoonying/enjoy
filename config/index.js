@@ -11,6 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+<<<<<<< HEAD
         '/hub':{
             target:"https://api.ricebook.com",
             host:'api.ricebook.com',
@@ -31,6 +32,29 @@ module.exports = {
             host:"api.ricebook.com",
             changeOrigin:true
         }
+=======
+<<<<<<< HEAD
+        '/hub': {
+            target: 'https://api.ricebook.com',
+            host: 'api.ricebook.com',
+            changeOrigin:true
+        }
+        
+=======
+          '/hub': {
+             //https://api.ricebook.com/hub/home/v1/mini_app/homepage.json
+              target: 'https://api.ricebook.com',
+              host: 'api.ricebook.com',
+              changeOrigin:true
+          },
+           '/users': {
+             //https://api.ricebook.com/hub/home/v1/mini_app/homepage.json
+              target: 'mongodb://localhost/users',
+              host: 'localhost/users',
+              changeOrigin:true
+          },
+>>>>>>> a9315bf883d72bc28408ade16ce5487a9dcd3db1
+>>>>>>> 92fb2f799b2aeba5b521641ef82e5f669f948ec2
     },
 
     // Various Dev Server settings

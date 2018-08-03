@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+<<<<<<< HEAD
 .nav{
   position: relative;
  /* display: flex */
@@ -124,5 +125,17 @@ i{
       }
     }
   }
+=======
+#index{
+  display: flex;
+  flex-direction: column;
+}
+section{
+  padding: 15px;
+  padding-top: 30px;
+  flex: 1;
+
+}
+>>>>>>> 92fb2f799b2aeba5b521641ef82e5f669f948ec2
 
 </style>

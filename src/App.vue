@@ -21,6 +21,10 @@ export default {
 ul{
   list-style: none
 }
+img{
+	display: block;
+	width: 100%
+}
 
 
 </style>
