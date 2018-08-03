@@ -58,15 +58,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-	*{
-		padding: 0;
-		margin: 0;
-	}
 	a{
 		text-decoration: none;
-	}
-	html,body{
-		height: 100%
 	}
 	.myself{
 		width: 100%;
@@ -87,14 +80,21 @@ export default {
     position: relative;
 	}
 	.head img{
-		    border-radius: 50%;
-    margin-top: 54px;
-    margin-bottom: 10px;
+		border-radius: 50%;
+    	margin-bottom: 10px;
         width: 70px;
-    height: 70px;
+    	height: 70px;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
 	}
 	.head h4{
-		line-height: 1;
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		margin-top: 88px;
+		margin-left: -72px;
 	}
 	.body{
 		font-size: 0;
@@ -127,7 +127,6 @@ export default {
 	.body .hh>ul{
 		    margin-top: 20px;
     overflow: hidden;
-    zoom: 1;
 	}
 	.body .hh>ul>li{
 		float:left;

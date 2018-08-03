@@ -2,7 +2,7 @@
   <div id="index">
     <navbar class="nav">
       <span @click = "handclick()" class="fenlei">分类</span>
-      <img src="../../static/images/index.png">
+      <!-- <img src="../../static/images/index.png"> -->
       <i class="iconfont icon-account i1" @click = "bandclick()"></i>
       <i class="iconfont icon-search i2" @click="showClick()"></i>
 
@@ -67,11 +67,11 @@ export default {
 <style scoped lang="scss">
 
 .nav{
-  position: relative;
+  /* position: relative; */
  /* display: flex */
 
 }
-  img{
+  /* img{
     height: 28px;
     margin-top: 8px;
     position: absolute;
@@ -79,7 +79,7 @@ export default {
     left: 167px;
 
     /* margin-left:  */
-  }
+  /* }  */
   .fenlei{
     line-height: 44px;
     padding-left: 17px;

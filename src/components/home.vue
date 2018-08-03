@@ -93,7 +93,6 @@ export default {
   #index_list{
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 30px;
     line-height: 1;
     h3{
       font-size: 21px;
@@ -106,7 +105,6 @@ export default {
   }
   img{
     height: 223px;
-    width: 100%;
   }
   
   
