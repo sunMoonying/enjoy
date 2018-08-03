@@ -51,12 +51,10 @@ export default {
     return {
       
     }
-<<<<<<< HEAD
   },
   components:{
   	sidebar
-=======
->>>>>>> 92fb2f799b2aeba5b521641ef82e5f669f948ec2
+
   }
   
 }

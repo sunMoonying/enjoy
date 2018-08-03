@@ -37,10 +37,7 @@ export default {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-<<<<<<< HEAD
-=======
   z-index: 100;
->>>>>>> 92fb2f799b2aeba5b521641ef82e5f669f948ec2
 }
 ul{
   height: 50px;
