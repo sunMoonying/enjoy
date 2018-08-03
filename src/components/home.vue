@@ -91,8 +91,6 @@ export default {
     }
   }
   #index_list{
-    margin-right: 20px;
-    margin-left: 20px;
     line-height: 1;
     h3{
       font-size: 21px;
