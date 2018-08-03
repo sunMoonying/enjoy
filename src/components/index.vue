@@ -48,10 +48,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+#index{
+  display: flex;
+  flex-direction: column;
+}
 section{
   padding: 15px;
   padding-top: 30px;
+  flex: 1;
 
 }
 

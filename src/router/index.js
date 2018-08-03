@@ -11,6 +11,9 @@ import myself from '../components/myself'
 import kol from '../components/kol'
 import kolsell from '../components/kolsell'
 import login from '../components/login'
+import more from '../components/more'
+import better from '../components/better'
+import newr from '../components/newr'
 
 Vue.use(Router)
 
@@ -39,10 +42,7 @@ export default new Router({
     	}]
 
     },
-    {
-		path:'*',
-		redirect : '/index'
-    },
+    
     {
     	path: '/detail/:id',
     	component: detail
@@ -77,6 +77,23 @@ export default new Router({
 		path: '/login',
 		component : login
     }
-    
+    ,
+    {
+        path: '/more',
+        component : more,
+        children : [
+        {
+            path : 'newr',
+            component : newr
+        },
+        {
+            path : 'better',
+            component : better
+        }]
+    },
+    {
+        path:'*',
+        redirect : '/index'
+    }
   ]
 })

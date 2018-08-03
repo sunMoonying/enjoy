@@ -10,7 +10,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        '/hub': {
+            target: 'https://api.ricebook.com',
+            host: 'api.ricebook.com',
+            changeOrigin:true
+        }
+        
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
