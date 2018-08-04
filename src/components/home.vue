@@ -8,7 +8,7 @@
       <ul>
         <h3>{{datalist[0].group_section.title}}</h3>
          <div class="date">{{datalist[0].group_section.desc}}</div>
-        <li v-for="data in datalist[0].tabs">
+        <li v-for="data in datalist[0].tabs" @click = "bandclick(data.enjoy_url,isshow)">
           <img :src="data.url">
           <div class="product_title">{{data.title}}</div>
           <div class="product_shuo">{{data.desc}}</div>
@@ -49,13 +49,16 @@ export default {
   name: 'home',
   data () {
     return {
-      datalist : []
+      datalist : [],
+      isshow : true
     }
   },
   methods:{
-    bandclick(data){
+    bandclick(data2,isshow){
       // console.log(111)
-      router.push(`/detail/${data}`);
+      var str2 = data2.substr(29);
+      this.$router.push({path: '/detail1', query: {str2,isshow}});
+
     }
   },
   mounted(){

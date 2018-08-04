@@ -15,6 +15,8 @@ import more from '../components/more'
 import better from '../components/better'
 import newr from '../components/newr'
 import list from '../components/list'
+import detail1 from '../components/detail1'
+import topicpage from '../components/topicpage'
 
 Vue.use(Router)
 
@@ -51,6 +53,10 @@ export default new Router({
     {
     	path: '/detail/:id',
     	component: detail
+    },
+    {
+        path: '/detail1',
+        component: detail1
     },
     {
     	path: '/my',
@@ -108,6 +114,10 @@ export default new Router({
     {
         path:'*',
         redirect : '/index'
+    },
+    {
+        path : 'topicpage',
+        component : topicpage
     }
   ]
 })

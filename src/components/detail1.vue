@@ -27,19 +27,14 @@
         <span class="tag" v-for="tag in basic.display_property_group">{{tag.name}}</span>
       </div>
     </div>
-
-
     <div id="heng"></div>
-
-
-    <div id="message" v-if="modules!=null && modules.length>0" >
-
+    <div id="message" v-if = "isshow">
       <h3 class="mes">商户信息</h3>
-  <!-- <div class="mes_title">{{modules[0].data.restaurants}}</div> -->
-      <div class="mes_title">{{modules[0].data.restaurants[0].restaurant_name}}</div>
-      <div id="address">{{modules[0].data.restaurants[0].restaurant_address}}</div>
-      <div id="tel">{{modules[0].data.restaurants[0].restaurant_phone_numbers[0]}}</div>
-      
+        <div v-if = "restaurants.length !== 0">
+          <div class="mes_title">{{restaurants.data.restaurants[0].restaurant_name}}</div>
+          <div id="address">{{restaurants.data.restaurants[0].restaurant_address}}</div>
+          <div id="tel">{{restaurants.data.restaurants[0].restaurant_phone_numbers[0]}}</div>
+        </div>       
     </div>
 
     <div id="heng2"></div>
@@ -63,11 +58,9 @@
 </template>
 
 <script>
-  // import router from "../router";
-  import axios from "axios";
-  require('vue-swipe/dist/vue-swipe.css');
-  import { Swipe, SwipeItem } from 'vue-swipe';
-
+import axios from "axios";
+require('vue-swipe/dist/vue-swipe.css');
+import { Swipe, SwipeItem } from 'vue-swipe';
 
 export default {
   name: 'detail',
@@ -76,38 +69,32 @@ export default {
       all:[],
       basic:null,
       pro_img:[],
-      modules:[]
+      modules:[],
+      restaurants:[],
+      isshow : ''
     }
   },
   mounted(){
-    https://api.ricebook.com/product/info/product_detail.json?product_id=1035777&sub_product_id=5075036
-
-    //https://api.ricebook.com/product/info/product_detail.json?product_id=1046843
-  	console.log(this.$route.params.id);
-    axios.get(`/product/info/product_detail.json?product_id=${this.$route.params.id}`).then(res=>{
-      console.log(res.data)
+    this.isshow = this.$route.query.isshow;
+    axios.get(`/product/info/product_detail.json?product_id=${this.$route.query.str2}`).then(res=>{
+      // console.log(res.data);
       this.all = res.data;
-
-      // console.log(res.data.basic)
       this.basic = res.data.basic
-      // console.log(this.basic);
-
-      // console.log(res.data.modules);
       this.modules = res.data.modules;
-
       this.pro_img = res.data.basic.product_images;
-      // console.log(this.pro_img)
-
-    })
+      this.restaurants = res.data.modules[0];
+    });
   },
   components:{
     Swipe,
     SwipeItem
+  },
+  methods:{
+    
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #banner{
   height: 250px;
