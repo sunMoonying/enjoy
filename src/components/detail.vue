@@ -78,7 +78,7 @@
         <li v-for="imgs in modules[1].data.images" class="pingjiatu">
           <img :src="imgs" class="imgs2">
         </li>
-        <span class="number">{{modules[1].data.images.length}}</span>
+        <!-- <span class="number">{{modules[1].data.images.length}}</span> -->
       </ul>
 
     <!-- ===========================评价图片轮播======================== -->
