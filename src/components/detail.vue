@@ -155,6 +155,8 @@ export default {
     }
   },
   mounted(){
+    https://api.ricebook.com/product/info/product_detail.json?product_id=1035777&sub_product_id=5075036
+
     //https://api.ricebook.com/product/info/product_detail.json?product_id=1046843
   	console.log(this.$route.params.id);
     axios.get(`/product/info/product_detail.json?product_id=${this.$route.params.id}`).then(res=>{
