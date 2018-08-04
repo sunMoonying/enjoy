@@ -78,13 +78,9 @@
         <li v-for="imgs in modules[1].data.images" class="pingjiatu">
           <img :src="imgs" class="imgs2">
         </li>
-<<<<<<< HEAD
+
 <!--         <span class="number">{{modules[1].data.images.length}}</span>
- -->      </ul>
-=======
-        <!-- <span class="number">{{modules[1].data.images.length}}</span> -->
-      </ul>
->>>>>>> 203afcc1ebd909ef8f10d400416d85f2b850c1b3
+ -->  </ul>
 
     <!-- ===========================评价图片轮播======================== -->
       <div class="swiper-container" v-show="imgShow" @click="imgShow = !imgShow">
