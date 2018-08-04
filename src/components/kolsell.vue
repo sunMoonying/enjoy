@@ -38,7 +38,6 @@ export default {
   methods : {
   	bandclick(data){
 
-  		router.push(`/detail1/${data}`);
   	}
   },
   mounted(){
