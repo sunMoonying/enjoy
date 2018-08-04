@@ -1,7 +1,7 @@
 <template>
   <div class="better">
     <ul>
-      <li v-for = "data in datalist">
+      <li v-for = "data in datalist" @click = "bandclick(data.data.enjoy_url)">
         <div class="text">
           <h4>{{data.data.title}}</h4>
           <h5>{{data.data.desc}}</h5>
@@ -36,7 +36,10 @@ export default {
   	
   },
   methods : {
-  	
+  	bandclick(data){
+      var str2 = data.substr(29);
+      this.$router.push({path: '/detail1', query: {str2}});
+    }
   }
   
 }

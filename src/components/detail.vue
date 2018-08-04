@@ -78,8 +78,8 @@
         <li v-for="imgs in modules[1].data.images" class="pingjiatu">
           <img :src="imgs" class="imgs2">
         </li>
-        <span class="number">{{modules[1].data.images.length}}</span>
-      </ul>
+<!--         <span class="number">{{modules[1].data.images.length}}</span>
+ -->      </ul>
 
     <!-- ===========================评价图片轮播======================== -->
       <div class="swiper-container" v-show="imgShow" @click="imgShow = !imgShow">
@@ -155,12 +155,8 @@ export default {
     }
   },
   mounted(){
-    https://api.ricebook.com/product/info/product_detail.json?product_id=1035777&sub_product_id=5075036
-
-    //https://api.ricebook.com/product/info/product_detail.json?product_id=1046843
-  	console.log(this.$route.params.id);
     axios.get(`/product/info/product_detail.json?product_id=${this.$route.params.id}`).then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       this.all = res.data;
 
       // console.log(res.data.basic)

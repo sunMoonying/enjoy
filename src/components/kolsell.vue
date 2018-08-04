@@ -2,8 +2,8 @@
   <div class="kolsell" v-if = "datalist.length !== 0">
     		<img :src="datalist[0].data.tabs[0].url" alt="">
     <ul>
-      <li v-for = "data in tabs" @click = "bandclick(data)">
-         <img :src="data.url+'?imageView2/1/w/200/h/200'" alt="">
+      <li v-for = "data in tabs" @click = "bandclick(data.enjoy_url)">
+         <img :src="data.url" alt="">
          <div class="info">
            <div data-v-36292087="" class="info">
               <p data-v-36292087="" class="title">{{data.title}}</p> 
@@ -37,7 +37,9 @@ export default {
   },
   methods : {
   	bandclick(data){
-  		router.push(`/detail1/${data}`);
+      var str2 = data.substr(29);
+      this.$router.push({path: '/detail1', query: {str2}});
+
   	}
   },
   mounted(){
@@ -45,6 +47,8 @@ export default {
       // console.log(res.data);
       this.datalist = res.data;
       this.tabs = this.datalist[1].data.tabs
+
+
     })
   }
   

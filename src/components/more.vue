@@ -32,16 +32,25 @@ export default {
     }
   },
   mounted(){  	
-  	this.text = this.$route.query.str;
+
+    console.log( window.localStorage.getItem('more-router'));
+    // this.text = this.$route.query.str;
+  	this.text = window.localStorage.getItem('more-router');
   	axios.get(`/hub/home/v1/web/category_detail.json?city_id=140&${this.text}&type=choice&page=0`).then(res=>{
   	      this.datalist = res.data;
   	      this.better1 = this.datalist.columns[0].alias;
   	      this.newr1 = this.datalist.columns[1].alias;
+          
           this.$router.push({path:'/more/better',query: {'better1':this.better1,'text':this.text}});
           // console.log(this.datalist)
         })
   },
-  
+  updated(){   
+    var reg =/more\?str=category_id/g;
+    if(reg.test(window.location.href) ){
+      this.$router.push({path:'/more/better',query: {'better1':this.better1,'text':this.text}});
+    }
+  },
   components : {
   	navbar,
     sidebar

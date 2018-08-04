@@ -27,9 +27,9 @@ export default {
     }
   },
   mounted(){
-    console.log(this.$route.params.id1);
+    // console.log(this.$route.params.id1);
     axios.get(`/4/tab/category_product_list.json?category_id=${this.$route.params.id1}&sort=1&from_id=0&city_id=140&page=0`).then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       this.food = res.data
     })
 

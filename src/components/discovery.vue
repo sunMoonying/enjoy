@@ -126,6 +126,7 @@ export default {
   methods : {
     bandclick(data){
       var str = data.substr(39);
+      window.localStorage.setItem('more-router',str);
       this.$router.push({path: '/more', query: {str}});
     },
     detailClick(data1){

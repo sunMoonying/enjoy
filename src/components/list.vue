@@ -33,7 +33,7 @@ export default {
   },
   mounted(){
     axios.get('/cdn/home/djEvdmlydHVhbC9pbl9jYXRlZ29yeS5qc29uP2NpdHlfaWQ9MTQwJmlzX25ld19sb2NhbD1mYWxzZSZtZDU9ZDM5MTBmMDA1N2Q2NzBlNzU0MmQxMTlkYzRhZWVlNzYmMjAxODA4MDIxMDAw').then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       this.datalist = res.data
     })
   }
