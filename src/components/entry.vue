@@ -78,10 +78,10 @@ export default {
   }
   .food_img{
     /* height: 115px; */
-    width: 188px;
+    width: 50%;
   }
   .food_name{
-    width: 160px;
+    width: 40%;
     height: 60px;
     line-height: 1.3;
     font-size: 16px;

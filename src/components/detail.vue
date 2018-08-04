@@ -79,8 +79,8 @@
           <img :src="imgs" class="imgs2">
         </li>
 
-<!--         <span class="number">{{modules[1].data.images.length}}</span>
- -->  </ul>
+      </ul>
+
 
     <!-- ===========================评价图片轮播======================== -->
       <div class="swiper-container" v-show="imgShow" @click="imgShow = !imgShow">
