@@ -60,9 +60,9 @@ export default {
   },
   mounted(){
     axios.get('/hub/home/v1/web/week_choice.json?city_id=140&page=0').then(res=>{
-        console.log(res.data)
+        // console.log(res.data)
         this.datalist = res.data
-        console.log(this.datalist[0].tabs[0])
+        // console.log(this.datalist[0].tabs[0])
     })
   }
 }

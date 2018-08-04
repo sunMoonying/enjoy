@@ -101,7 +101,7 @@ export default {
 		axios.get('/hub/home/v1/web/explore.json?city_id=140').then(res=>{
 			// console.log(res.data);
 			this.datalist = res.data;
-			console.log(this.datalist);
+			// console.log(this.datalist);
       this.sidelist  = res.data[0].data.tabs;
       this.sidelist1  = res.data[2].data.tabs;
 			// console.log(this.sidelist)
