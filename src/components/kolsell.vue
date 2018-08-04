@@ -37,18 +37,15 @@ export default {
   },
   methods : {
   	bandclick(data){
-  		router.push(`/detail/${data}`);
+  		router.push(`/detail1/${data}`);
   	}
   },
   mounted(){
-    //https://api.ricebook.com/hub/home/v1/mini_app/homepage.json
-
-      
-      axios.get('/hub/home/v1/mini_app/homepage.json').then((res)=>{
-            console.log(res.data);
-            this.datalist = res.data;
-           this.tabs = this.datalist[1].data.tabs
-      })
+    axios.get('/hub/home/v1/mini_app/homepage.json').then((res)=>{
+      // console.log(res.data);
+      this.datalist = res.data;
+      this.tabs = this.datalist[1].data.tabs
+    })
   }
   
 }

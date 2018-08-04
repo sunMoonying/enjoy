@@ -1,6 +1,7 @@
 <template>
   <div class="more" v-if = "datalist.length !== 0">
     <navbar></navbar>
+    <sidebar></sidebar>
     <div class="head">
       <h2>{{datalist.group_section.title}}</h2>
       <p>{{datalist.group_section.desc}}</p>
@@ -18,6 +19,7 @@
 
 <script>
 import navbar from './navbar';
+import sidebar from './sidebar';
 import axios from 'axios';
 export default {
   name: 'more',
@@ -36,12 +38,13 @@ export default {
   	      this.better1 = this.datalist.columns[0].alias;
   	      this.newr1 = this.datalist.columns[1].alias;
           this.$router.push({path:'/more/better',query: {'better1':this.better1,'text':this.text}});
-          console.log(this.datalist)
+          // console.log(this.datalist)
         })
   },
   
   components : {
-  	navbar
+  	navbar,
+    sidebar
   }
   
 }

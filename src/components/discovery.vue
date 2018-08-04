@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="discovery" v-if="datalist.length !== 0">
     <h2>{{datalist[0].data.group_section.title}}</h2>
     <p>{{datalist[0].data.group_section.desc}}</p>
@@ -51,7 +51,8 @@
         <span @click = "bandclick(datalist[3].data.group_section.enjoy_url)">查看更多</span></h2>
       <p>{{datalist[3].data.group_section.desc}}</p>
       <ul>
-        <li v-for = "data in datalist[3].data.tabs">
+        <li v-for = "data in datalist[3].data.tabs" @click = "detailClick(data.enjoy_url
+)">
           <img :src="data.url">
         </li>
       </ul>
@@ -63,7 +64,8 @@
       </h2>
       <p>{{datalist[4].data.group_section.desc}}</p>
       <ul>
-        <li v-for = "data in datalist[4].data.tabs">
+        <li v-for = "data in datalist[4].data.tabs" @click = "detailClick(data.enjoy_url
+)">
           <img :src="data.url">
         </li>
       </ul>
@@ -75,7 +77,8 @@
       </h2>
       <p>{{datalist[5].data.group_section.desc}}</p>
       <ul>
-        <li v-for = "data in datalist[5].data.tabs">
+        <li v-for = "data in datalist[5].data.tabs" @click = "detailClick(data.enjoy_url
+)">
           <img :src="data.url">
         </li>
       </ul>
@@ -101,7 +104,7 @@ export default {
 		axios.get('/hub/home/v1/web/explore.json?city_id=140').then(res=>{
 			// console.log(res.data);
 			this.datalist = res.data;
-			console.log(this.datalist);
+			// console.log(this.datalist);
       this.sidelist  = res.data[0].data.tabs;
       this.sidelist1  = res.data[2].data.tabs;
 			// console.log(this.sidelist)
@@ -122,8 +125,13 @@ export default {
 	},
   methods : {
     bandclick(data){
-    var str = data.substr(39);
+      var str = data.substr(39);
       this.$router.push({path: '/more', query: {str}});
+    },
+    detailClick(data1){
+      var str2 = data1.substr(29);
+      this.$router.push({path: '/detail1', query: {str2}});
+
     }
   }
   
